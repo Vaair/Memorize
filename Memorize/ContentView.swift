@@ -17,10 +17,12 @@ struct ContentView: View {
                     self.viewModel.choose(card: card)
                 }
             }
+            .aspectRatio(2/3, contentMode: .fit)
         }
         .padding()
         .foregroundColor(.orange)
-        .font(Font.largeTitle)
+        .font(viewModel.cards.count < 8 ? Font.largeTitle : Font.title)
+        
     }
 }
 

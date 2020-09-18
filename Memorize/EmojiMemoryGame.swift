@@ -13,8 +13,8 @@ class EmojiMemoryGame{
     private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame() //static функция
     
     static func createMemoryGame() -> MemoryGame<String>{ //функция типа, а не экземпляр класса
-        let emojis : Array<String> = ["👻","🎃", "🕷"]
-        return MemoryGame<String>(numberOfPairsOfCards: emojis.count) {pairIndex in emojis[pairIndex]} //для связи с model. (set) Стеклянная дверь, смотреть можно, изменять - нет. Встроенная функция (замыкание)
+        let emojis : Array<String> = ["👻","🎃", "🕷", "🕸", "🦇"]
+        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...5)) {pairIndex in emojis[pairIndex]} //для связи с model. (set) Стеклянная дверь, смотреть можно, изменять - нет. Встроенная функция (замыкание)
     }
     
     // MARK: — Access to the Model
